@@ -40,8 +40,45 @@ export default function Home() {
 
     <section className = {styles.trusted}>
       <h2>Trusted by the Community</h2>
-      <div className={styles.stats}
+      <div className={styles.stats}>
+        <div>132<br/> Groups Created</div>
+        <div>$12,500<br/>Saved Onchain</div>
+        <div>98%<br/>Completion Rate</div>
+      </div>
+
+      <blockquote>
+        "RoundStack transformed how our team saves for equipment."
+      </blockquote>
     </section>
+
+    <section id="groups" className={styles.groups}>
+      <h2>Active Groups</h2>
+      <div className={styles.groupList}>
+        <div className = {styles.groupCard}>
+          <strong>Tech Professionals</strong><br/>
+          Weekly * $100 * 6 members<br/>
+          Next Payout: Sep 5th<br/>
+          <button>Join Group</button>
+        </div>
+        <div className={styles.groupCard}>
+          <strong>Crypto Enthusiasts</strong><br/>
+          Biwweekly * 0.1 ETH * 5 members<br/>
+          Next payout: September 10th<br/>
+          <button> Join Group</button>
+        </div>
+      </div>
+    </section>
+
+    <section className = {styles.finalCTA}>
+      <h2>Ready to Save Smarter?</h2>
+      <button>Start a Group</button>
+      <button>Connect Wallet</button>
+    </section>
+
+
+    <footer className = {styles.footer}>
+      <p>(c) RoundStack for the Morph's Consumer Buildation </p>
+    </footer>
     </div>
   )
 }
