@@ -22,7 +22,6 @@ export default function RoundStackLanding() {
               Groups
             </a>
             <button className={styles.connectButton}>
-              <span className={styles.buttonIcon}>👛</span>
               Connect Wallet
             </button>
           </div>
@@ -57,14 +56,12 @@ export default function RoundStackLanding() {
 
             {/* Hero Illustration */}
             <div className={styles.heroIllustration}>
-              <div className={styles.illustrationContainer}>
-                <div className={styles.centralNode}>🔗</div>
-                <div className={styles.node1}>👥</div>
-                <div className={styles.node2}>💰</div>
-                <div className={styles.node3}>🛡️</div>
-                <div className={styles.node4}>🔄</div>
+               
+                <div className={styles.centralNode}>
+  <img src="1st.jpg" alt="Hero illustration" className={styles.heroImage} />
+</div>
+
                 <div className={styles.connectionLines}></div>
-              </div>
             </div>
           </div>
         </div>
