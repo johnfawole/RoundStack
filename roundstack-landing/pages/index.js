@@ -1,4 +1,5 @@
 import styles from "../styles/Home.module.css"
+import Link from "next/link"
 
 export default function RoundStackLanding() {
   return (
@@ -21,6 +22,9 @@ export default function RoundStackLanding() {
             <a href="#groups" className={styles.navLink}>
               Groups
             </a>
+            <Link href="/dashboard" className={styles.navLink}>
+              Dashboard
+            </Link>
             <button className={styles.connectButton}>
               Connect Wallet
             </button>

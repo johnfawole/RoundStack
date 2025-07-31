@@ -1,0 +1,590 @@
+.container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Navigation */
+.nav {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  width: 2rem;
+  height: 2rem;
+  background-color: #111827;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statsButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  background-color: transparent;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.statsButton:hover {
+  background-color: #f9fafb;
+}
+
+.connectButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #111827;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.connectButton:hover {
+  background-color: #1f2937;
+}
+
+.buttonIcon {
+  font-size: 1rem;
+}
+
+/* Dashboard Content */
+.dashboardContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Hero Stats */
+.heroStats {
+  margin-bottom: 2rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.statCard {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statIcon {
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statNumber {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Main Grid Layout */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Active Groups Section */
+.activeGroups {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1.5rem;
+}
+
+.groupsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.groupCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  background-color: #fafafa;
+}
+
+.groupHeader {
+  margin-bottom: 1rem;
+}
+
+.groupInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.groupName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.groupBadge {
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  border: 1px solid #d1d5db;
+}
+
+.groupBadgeReady {
+  background-color: #dcfce7;
+  color: #166534;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  border: 1px solid #bbf7d0;
+}
+
+.groupBadgeWaiting {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  border: 1px solid #fde68a;
+}
+
+.groupDetails {
+  margin-bottom: 1rem;
+}
+
+.detailRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detailLabel {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.detailValue {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.progressContainer {
+  margin-top: 0.25rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: #6b7280;
+  transition: width 0.3s ease;
+}
+
+.groupActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.primaryButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #111827;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.primaryButton:hover {
+  background-color: #1f2937;
+}
+
+.secondaryButton {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondaryButton:hover {
+  background-color: #f9fafb;
+}
+
+.disabledButton {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: #9ca3af;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  cursor: not-allowed;
+}
+
+/* Deadlines Section */
+.deadlines {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.deadlinesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.deadlineItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  background-color: #fafafa;
+}
+
+.deadlineIcon {
+  font-size: 1.25rem;
+  opacity: 0.6;
+}
+
+.deadlineInfo {
+  flex: 1;
+}
+
+.deadlineName {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.deadlineTime {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.deadlineAmount {
+  text-align: right;
+}
+
+.amount {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebarCard {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.titleIcon {
+  font-size: 1.25rem;
+}
+
+.cardContent {
+  padding: 1rem 1.5rem;
+}
+
+/* Notifications */
+.notification {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  border-radius: 0.375rem;
+  margin-bottom: 0.75rem;
+}
+
+.notification:last-child {
+  margin-bottom: 0;
+}
+
+.notificationIcon {
+  font-size: 1.25rem;
+  margin-top: 0.125rem;
+}
+
+.notificationContent {
+  flex: 1;
+}
+
+.notificationTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.notificationDesc {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.notificationTime {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* Quick Actions */
+.actionButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: #111827;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.actionButton:hover {
+  background-color: #1f2937;
+}
+
+.actionButtonSecondary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: transparent;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.actionButtonSecondary:hover {
+  background-color: #f9fafb;
+}
+
+.actionButtonSecondary:last-child {
+  margin-bottom: 0;
+}
+
+.actionIcon {
+  font-size: 1.25rem;
+}
+
+/* Reputation Score */
+.reputationScore {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.scoreNumber {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+.scoreMax {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.reputationDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reputationItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.reputationLabel {
+  color: #6b7280;
+}
+
+.reputationValue {
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .detailRow {
+    grid-template-columns: 1fr;
+  }
+
+  .navActions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .dashboardContent {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .groupInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .deadlineItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .deadlineAmount {
+    text-align: left;
+  }
+}
