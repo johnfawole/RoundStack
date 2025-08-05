@@ -1,7 +1,23 @@
 import styles from "../styles/Home.module.css"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function RoundStackLanding() {
+  const [walletAddress, setWalletAddress] = useState(null)
+
+  const connectWallet = async () => {
+    if (typeof window !== "undefined" && window.ethereum) {
+      try {
+        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" })
+        setWalletAddress(accounts[0])
+      } catch (err) {
+        alert("Connection failed: " + err.message)
+      }
+    } else {
+      alert("MetaMask not detected. Please install MetaMask.")
+    }
+  }
+  
   return (
     <div className={styles.container}>
       {/* Navigation */}
@@ -13,20 +29,11 @@ export default function RoundStackLanding() {
           </div>
 
           <div className={styles.navLinks}>
-            <a href="#how-it-works" className={styles.navLink}>
-              How It Works
-            </a>
-            <a href="#features" className={styles.navLink}>
-              Features
-            </a>
-            <a href="#groups" className={styles.navLink}>
-              Groups
-            </a>
             <Link href="/dashboard" className={styles.navLink}>
               Dashboard
             </Link>
-            <button className={styles.connectButton}>
-              Connect Wallet
+            <button className={styles.connectButton} onClick={connectWallet}>
+              {walletAddress ? `Connected: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : "Connect Wallet"}
             </button>
           </div>
         </div>
@@ -37,9 +44,9 @@ export default function RoundStackLanding() {
         <div className={styles.heroContent}>
           <div className={styles.heroGrid}>
             <div className={styles.heroText}>
-              <h1 className={styles.heroTitle}>Revolutionize Group Savings with Smart Contracts</h1>
+              <h1 className={styles.heroTitle}>Group Savings Made Easier Onchain</h1>
               <p className={styles.heroSubtitle}>
-                Create or join automated rotating savings groups. On-chain, reputation-based, and dispute-resilient.
+                Create or join automated rotating savings groups. Built on Morph L2.
               </p>
 
               <div className={styles.heroButtons}>
