@@ -10,15 +10,13 @@ contract RoundStackFactory {
     function createGroup(
         uint256 contributionAmount,
         uint256 maxMembers,
-        uint256 intervalSeconds,
-        address token
+        uint256 intervalSeconds
     ) external returns (address group) {
-        RoundStackGroup newGroup = new RoundStackGroup (
+        RoundStackGroup newGroup = new RoundStackGroup(
             msg.sender,
             contributionAmount,
             maxMembers,
-            intervalSeconds,
-            token
+            intervalSeconds
         );
 
         allGroups.push(address(newGroup));
